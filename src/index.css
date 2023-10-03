@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Domine';
+    src: url("assets/font/Domine-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url("assets/font/Rubik-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: 'Oak Sans';
+    src: url("assets/font/OakSansVF-BF648bbebd4d82b.ttf");
+}
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url("assets/font/KaushanScript-Regular.ttf");
+}
+@font-face {
+    font-family: 'MaterialSymbolsOutlined';
+    src: url("assets/font/MaterialSymbolsOutlined[FILL\,GRAD\,opsz\,wght].ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@layer base{
+    h1{
+        @apply text-3xl font-bold;
+    }
+    h2{
+        @apply text-2xl font-bold;
+    }
+    h3{
+        @apply text-xl font-semibold;
+    }
+    h4{
+        @apply text-lg font-semibold;
+    }
+}
+
+@layer components{
+    .row{
+        @apply flex;
+    }
+    .col-1{
+        @apply flex-auto w-[8.33%];
+    }
+    .col-2{
+        @apply flex-auto w-[16.6667%];
+    }
+    .col-3{
+        @apply flex-auto w-[24.33%];
+    }
+    .cover-zoom{
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-delay: .4s;
+    }
+    .material-symbols-outlined{
+        font-family: 'MaterialSymbolsOutlined';
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+    }
+    
+    
+    
+}
+
+
+::-webkit-scrollbar{
+        width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(202, 255, 142, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    @apply bg-drab-dark-brown;
+    border-radius: 30px;
+}
